@@ -1,0 +1,90 @@
+
+
+/* ----- RESET ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+
+/* ----- BODY ----- */
+body {
+    background: #051A40; /* bleu sombre SHOPNET */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ----- CONTAINER ----- */
+.login-container {
+    width: 360px;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+/* ----- LOGO ----- */
+.logo {
+    font-size: 60px;
+    color: #0A84FF;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* ----- TITLE ----- */
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* ----- INPUTS ----- */
+form input {
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #0A84FF22; /* bleu très clair en transparence */
+    color: #ffffff;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+form input::placeholder {
+    color: #d0e0ff;
+}
+
+form input:focus {
+    outline: none;
+    background: #0A84FF44; /* bleu un peu plus opaque */
+}
+
+/* ----- BUTTON ----- */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #0A84FF;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #006fe0;
+}
+
+/* ----- ERROR MESSAGE ----- */
+.error {
+    margin-top: 10px;
+    color: #ff5a5a;
+    font-size: 14px;
+    display: none;
+}

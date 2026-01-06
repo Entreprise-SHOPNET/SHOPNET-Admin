@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion – SHOPNET Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <!-- Logo -->
+        <div class="logo">S</div>
+
+        <!-- Nom de l'application -->
+        <h1 class="title">SHOPNET</h1>
+
+        <!-- Formulaire -->
+        <form id="loginForm">
+            <input 
+                type="text" 
+                id="adminId" 
+                placeholder="ID d’accès"
+                required
+            >
+            <input 
+                type="password" 
+                id="adminKey" 
+                placeholder="Clé d’accès"
+                required
+            >
+            <button type="submit">Se connecter</button>
+        </form>
+
+        <!-- Zone d’erreur -->
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

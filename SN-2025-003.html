@@ -4,9 +4,14 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vérification Administrateur SHOPNET</title>
 
 <style>
+
+*{
+box-sizing:border-box;
+}
 
 body{
 margin:0;
@@ -15,45 +20,50 @@ background:linear-gradient(135deg,#0f172a,#1e293b);
 color:white;
 display:flex;
 justify-content:center;
-align-items:center;
-height:100vh;
+align-items:flex-start;
+min-height:100vh;
+padding:20px 10px;
 }
 
 .container{
 background:#1e293b;
-width:420px;
-border-radius:15px;
-padding:30px;
+width:100%;
+max-width:380px;
+border-radius:16px;
+padding:25px 20px;
 text-align:center;
 box-shadow:0 20px 40px rgba(0,0,0,0.5);
-animation:fadeIn 1.5s ease;
+animation:fadeIn 1.2s ease;
 }
 
 .logo{
-width:90px;
+width:80px;
 margin-bottom:10px;
 }
 
 h1{
+font-size:20px;
 margin:10px 0;
 }
 
 h2{
-margin-top:15px;
-font-size:22px;
+margin-top:12px;
+font-size:20px;
 }
 
 .badge{
 background:#22c55e;
-padding:6px 15px;
+padding:6px 14px;
 border-radius:20px;
-font-size:13px;
+font-size:12px;
 display:inline-block;
+margin-top:5px;
 }
 
 .info{
-margin-top:15px;
+margin-top:18px;
 text-align:left;
+font-size:14px;
 }
 
 .info p{
@@ -64,26 +74,33 @@ margin:6px 0;
 margin-top:20px;
 }
 
+.documents h3{
+font-size:16px;
+margin-bottom:10px;
+}
+
 .documents a{
 display:block;
 background:#0ea5e9;
-padding:10px;
+padding:12px;
 margin:8px 0;
-border-radius:8px;
+border-radius:10px;
 text-decoration:none;
 color:white;
-transition:0.3s;
+font-size:14px;
+font-weight:500;
+transition:0.25s;
 }
 
 .documents a:hover{
 background:#0284c7;
-transform:scale(1.05);
 }
 
 .footer{
-margin-top:20px;
-font-size:12px;
+margin-top:18px;
+font-size:11px;
 color:#94a3b8;
+line-height:1.4;
 }
 
 @keyframes fadeIn{
@@ -135,7 +152,7 @@ transform:translateY(0);
 <div class="footer">
 
 Plateforme officielle SHOPNET<br>
-Vérification administrative
+Système de vérification administrative
 
 </div>
 

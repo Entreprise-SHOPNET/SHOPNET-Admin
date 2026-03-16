@@ -3,160 +3,200 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vérification Investisseur SHOPNET</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vérification Investisseur SHOPNET</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
+    body {
+      font-family: 'Arial', Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
 
-*{
-box-sizing:border-box;
-}
+    /* CARTE PRINCIPALE - 100% mobile, sans arrondi */
+    .container {
+      background: #1e293b;
+      width: 100%;
+      max-width: 400px;
+      padding: 24px 20px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-out;
+    }
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-display:flex;
-justify-content:center;
-align-items:flex-start;
-min-height:100vh;
-padding:20px 10px;
-}
+    /* LOGO */
+    .logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 12px;
+    }
 
-.container{
-background:#1e293b;
-width:100%;
-max-width:380px;
-border-radius:16px;
-padding:25px 20px;
-text-align:center;
-box-shadow:0 20px 40px rgba(0,0,0,0.5);
-animation:fadeIn 1.2s ease;
-}
+    /* TITRES */
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 8px 0 4px;
+      line-height: 1.2;
+    }
 
-.logo{
-width:80px;
-margin-bottom:10px;
-}
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin: 12px 0 8px;
+      word-break: break-word;
+    }
 
-h1{
-font-size:20px;
-margin:10px 0;
-}
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #cbd5e1;
+    }
 
-h2{
-margin-top:12px;
-font-size:20px;
-}
+    /* BADGE VÉRIFIÉ - sans arrondi */
+    .badge {
+      background: #22c55e;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
 
-.badge{
-background:#22c55e;
-padding:6px 14px;
-border-radius:20px;
-font-size:12px;
-display:inline-block;
-margin-top:5px;
-}
+    /* ZONE INFORMATIONS */
+    .info {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 1rem;
+      background: #0f172a80;
+      padding: 16px 14px;
+      line-height: 1.6;
+    }
 
-.info{
-margin-top:18px;
-text-align:left;
-font-size:14px;
-}
+    .info p {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 6px 0;
+    }
 
-.info p{
-margin:6px 0;
-}
+    .info b {
+      min-width: 130px;
+      font-weight: 600;
+      color: #94a3b8;
+    }
 
-.documents{
-margin-top:20px;
-}
+    /* DOCUMENTS */
+    .documents {
+      margin-top: 24px;
+    }
 
-.documents h3{
-font-size:16px;
-margin-bottom:10px;
-}
+    .documents a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0ea5e9;
+      padding: 14px 12px;
+      margin: 10px 0;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
 
-.documents a{
-display:block;
-background:#0ea5e9;
-padding:12px;
-margin:8px 0;
-border-radius:10px;
-text-decoration:none;
-color:white;
-font-size:14px;
-font-weight:500;
-transition:0.25s;
-}
+    .documents a:hover {
+      background: #0284c7;
+    }
 
-.documents a:hover{
-background:#0284c7;
-}
+    /* Icônes textuelles pour les documents */
+    .documents a::before {
+      content: "📄 ";
+      font-size: 1.3rem;
+      margin-right: 8px;
+    }
 
-.footer{
-margin-top:18px;
-font-size:11px;
-color:#94a3b8;
-line-height:1.4;
-}
+    .documents a:nth-of-type(2)::before {
+      content: "🆔 ";
+    }
+    .documents a:nth-of-type(3)::before {
+      content: "🔒 ";
+    }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+    /* FOOTER */
+    .footer {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      border-top: 1px solid #334155;
+      padding-top: 16px;
+    }
 
-</style>
+    /* ANIMATION LÉGÈRE */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* AJUSTEMENT POUR TRÈS PETITS ÉCRANS */
+    @media (max-width: 360px) {
+      .container {
+        padding: 18px 14px;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      .info b {
+        min-width: 110px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo SHOPNET" class="logo">
+    <h1>Investisseur Officiel<br>SHOPNET</h1>
+    <span class="badge">Profil vérifié</span>
+    <h2>KYENGE SALUMU JEAN</h2>
 
-<div class="container">
+    <div class="info">
+      <p><b>ID Investisseur :</b> SN-INV-2025001</p>
+      <p><b>Statut :</b> Investisseur Actif</p>
+      <p><b>Entreprise :</b> SHOPNET</p>
+      <p><b>Rôle :</b> Investisseur Officiel</p>
+      <p><b>Année :</b> 2025</p>
+    </div>
 
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="logo">
+    <div class="documents">
+      <h3>Documents officiels</h3>
+      <a href="reconnaissance.png">Lettre de reconnaissance</a>
+      <a href="#">Identification administrative</a>
+      <a href="#">Accord de confidentialité</a>
+    </div>
 
-<h1>Investisseur Officiel SHOPNET</h1>
-
-<span class="badge">Profil vérifié</span>
-
-<h2>KYENGE SALUMU JEAN</h2>
-
-<div class="info">
-
-<p><b>ID Investisseur :</b> SN-INV-2025001</p>
-<p><b>Statut :</b> Investisseur Actif</p>
-<p><b>Entreprise :</b> SHOPNET</p>
-<p><b>Rôle :</b> Investisseur Officiel</p>
-<p><b>Année :</b> 2025</p>
-
-</div>
-
-<div class="documents">
-
-<h3>Documents officiels</h3>
-
-<a href="#">📄 Lettre de reconnaissance</a>
-<a href="#">📄 Identification administrative</a>
-<a href="#">📄 Accord de confidentialité</a>
-
-</div>
-
-<div class="footer">
-
-Plateforme officielle SHOPNET<br>
-Système de vérification administrative
-
-</div>
-
-</div>
-
+    <div class="footer">
+      Plateforme officielle SHOPNET<br>
+      Système de vérification administrative
+    </div>
+  </div>
 </body>
 </html>

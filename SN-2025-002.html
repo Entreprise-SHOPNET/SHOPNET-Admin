@@ -3,143 +3,185 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Vérification Administratrice SHOPNET</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vérification Administratrice SHOPNET</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-}
+    /* CARTE PRINCIPALE - angles droits, sans ombre */
+    .container {
+      background: #1e293b;
+      width: 100%;
+      max-width: 400px;
+      padding: 24px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
 
-.container{
-background:#1e293b;
-width:420px;
-border-radius:15px;
-padding:30px;
-text-align:center;
-box-shadow:0 20px 40px rgba(0,0,0,0.5);
-animation:fadeIn 1.5s ease;
-}
+    /* LOGO */
+    .logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 12px;
+    }
 
-.logo{
-width:90px;
-margin-bottom:10px;
-}
+    /* TITRES */
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 8px 0 4px;
+      line-height: 1.2;
+    }
 
-h1{
-margin:10px 0;
-}
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin: 12px 0 8px;
+      word-break: break-word;
+    }
 
-h2{
-margin-top:15px;
-font-size:22px;
-}
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #cbd5e1;
+    }
 
-.badge{
-background:#22c55e;
-padding:6px 15px;
-border-radius:20px;
-font-size:13px;
-display:inline-block;
-}
+    /* BADGE VÉRIFIÉ - sans arrondi */
+    .badge {
+      background: #22c55e;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
 
-.info{
-margin-top:15px;
-text-align:left;
-}
+    /* ZONE INFORMATIONS */
+    .info {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 1rem;
+      background: #0f172a80;
+      padding: 16px 14px;
+      line-height: 1.6;
+    }
 
-.info p{
-margin:6px 0;
-}
+    .info p {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 6px 0;
+    }
 
-.documents{
-margin-top:20px;
-}
+    .info b {
+      min-width: 150px;   /* pour aligner les labels */
+      font-weight: 600;
+      color: #94a3b8;
+    }
 
-.documents a{
-display:block;
-background:#0ea5e9;
-padding:10px;
-margin:8px 0;
-border-radius:8px;
-text-decoration:none;
-color:white;
-transition:0.3s;
-}
+    /* DOCUMENTS */
+    .documents {
+      margin-top: 24px;
+    }
 
-.documents a:hover{
-background:#0284c7;
-transform:scale(1.05);
-}
+    .documents a {
+      display: block;
+      background: #0ea5e9;
+      padding: 14px 12px;
+      margin: 10px 0;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: background 0.2s;
+      text-align: center;
+    }
 
-.footer{
-margin-top:20px;
-font-size:12px;
-color:#94a3b8;
-}
+    .documents a:hover {
+      background: #0284c7;
+    }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+    /* FOOTER */
+    .footer {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      border-top: 1px solid #334155;
+      padding-top: 16px;
+    }
 
-</style>
+    /* ANIMATION LÉGÈRE */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* AJUSTEMENT POUR TRÈS PETITS ÉCRANS */
+    @media (max-width: 360px) {
+      .container {
+        padding: 18px 12px;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+      .info b {
+        min-width: 120px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="Logo SHOPNET" class="logo">
+    <h1>Administratrice SHOPNET</h1>
+    <span class="badge">Profil vérifié</span>
+    <h2>KATUBAYI BAMUSAMBA Mélissa</h2>
 
-<div class="container">
+    <div class="info">
+      <p><b>ID Administratif :</b> SN-2025-002</p>
+      <p><b>Poste :</b> Responsable Finance et Ressources</p>
+      <p><b>Entreprise :</b> SHOPNET</p>
+      <p><b>Statut :</b> Administratrice Active</p>
+      <p><b>Date d'intégration :</b> Mars 2026</p>
+    </div>
 
-<img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" class="logo">
+    <div class="documents">
+      <h3>Documents administratifs</h3>
+      <a href="#">📄 Lettre de nomination</a>
+      <a href="#">📄 Identification administrative</a>
+      <a href="#">📄 Accord de confidentialité</a>
+    </div>
 
-<h1>Administratrice SHOPNET</h1>
-
-<span class="badge">Profil vérifié</span>
-
-<h2>KATUBAYI BAMUSAMBA Mélissa</h2>
-
-<div class="info">
-
-<p><b>ID Administratif :</b> SN-2025-002</p>
-<p><b>Poste :</b> Responsable Finance et Ressources</p>
-<p><b>Entreprise :</b> SHOPNET</p>
-<p><b>Statut :</b> Administratrice Active</p>
-<p><b>Date d'intégration :</b> Mars 2026</p>
-
-</div>
-
-<div class="documents">
-
-<h3>Documents administratifs</h3>
-
-<a href="#">📄 Lettre de nomination</a>
-<a href="#">📄 Identification administrative</a>
-<a href="#">📄 Accord de confidentialité</a>
-
-</div>
-
-<div class="footer">
-
-Plateforme officielle SHOPNET<br>
-Vérification administrative
-
-</div>
-
-</div>
-
+    <div class="footer">
+      Plateforme officielle SHOPNET<br>
+      Vérification administrative
+    </div>
+  </div>
 </body>
 </html>

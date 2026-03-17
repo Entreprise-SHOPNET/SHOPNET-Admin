@@ -1,161 +1,204 @@
+
+
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Vérification Administrateur SHOPNET</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vérification Administrateur SHOPNET</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        <style>
-            body {
-                margin: 0;
-                font-family: Arial, Helvetica, sans-serif;
-                background: linear-gradient(135deg, #0f172a, #1e293b);
-                color: white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
 
-            .container {
-                background: #1e293b;
-                width: 420px;
-                border-radius: 15px;
-                padding: 30px;
-                text-align: center;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-                animation: fadeIn 1.5s ease;
-            }
+    /* CARTE PRINCIPALE - angles droits, sans ombre */
+    .container {
+      background: #1e293b;
+      width: 100%;
+      max-width: 400px;   /* s'adapte aux mobiles */
+      padding: 24px 20px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
 
-            .logo {
-                width: 90px;
-                margin-bottom: 10px;
-            }
+    /* LOGO */
+    .logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 12px;
+    }
 
-            h1 {
-                margin: 10px 0;
-            }
+    /* TITRES */
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 8px 0 4px;
+      line-height: 1.2;
+    }
 
-            .badge {
-                background: #22c55e;
-                padding: 6px 15px;
-                border-radius: 20px;
-                font-size: 13px;
-                display: inline-block;
-            }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin: 12px 0 8px;
+      word-break: break-word;
+    }
 
-            .profile {
-                margin-top: 20px;
-            }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #cbd5e1;
+    }
 
-            .profile img {
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                border: 4px solid #38bdf8;
-                object-fit: cover;
-                animation: float 4s infinite ease-in-out;
-            }
+    /* BADGE VÉRIFIÉ - sans arrondi */
+    .badge {
+      background: #22c55e;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
 
-            .info {
-                margin-top: 15px;
-                text-align: left;
-            }
+    /* PHOTO DE PROFIL - carrée, plus de float */
+    .profile {
+      margin-top: 20px;
+    }
 
-            .info p {
-                margin: 6px 0;
-            }
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border: 4px solid #38bdf8;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 10px;
+    }
 
-            .documents {
-                margin-top: 20px;
-            }
+    /* ZONE INFORMATIONS */
+    .info {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 1rem;
+      background: #0f172a80;   /* fond léger */
+      padding: 16px 14px;
+      line-height: 1.6;
+    }
 
-            .documents a {
-                display: block;
-                background: #0ea5e9;
-                padding: 10px;
-                margin: 8px 0;
-                border-radius: 8px;
-                text-decoration: none;
-                color: white;
-                transition: 0.3s;
-            }
+    .info p {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 6px 0;
+    }
 
-            .documents a:hover {
-                background: #0284c7;
-                transform: scale(1.05);
-            }
+    .info b {
+      min-width: 140px;        /* pour aligner les labels */
+      font-weight: 600;
+      color: #94a3b8;
+    }
 
-            .footer {
-                margin-top: 20px;
-                font-size: 12px;
-                color: #94a3b8;
-            }
+    /* DOCUMENTS */
+    .documents {
+      margin-top: 24px;
+    }
 
-            /* Animations */
+    .documents a {
+      display: block;
+      background: #0ea5e9;
+      padding: 14px 12px;
+      margin: 10px 0;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: background 0.2s;
+      text-align: center;
+    }
 
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
+    .documents a:hover {
+      background: #0284c7;
+    }
 
-            @keyframes float {
-                0% {
-                    transform: translateY(0px);
-                }
-                50% {
-                    transform: translateY(-10px);
-                }
-                100% {
-                    transform: translateY(0px);
-                }
-            }
-        </style>
-    </head>
+    /* FOOTER */
+    .footer {
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      border-top: 1px solid #334155;
+      padding-top: 16px;
+    }
 
-    <body>
-        <div class="container">
-            <img
-                src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-                class="logo"
-            />
+    /* ANIMATION SIMPLE */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-            <h1>Administrateur SHOPNET</h1>
+    /* AJUSTEMENT POUR TRÈS PETITS ÉCRANS */
+    @media (max-width: 360px) {
+      .container {
+        padding: 18px 12px;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+      .info b {
+        min-width: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo SHOPNET" class="logo">
+    <h1>Administrateur SHOPNET</h1>
+    <span class="badge">Profil vérifié</span>
 
-            <span class="badge">Profil vérifié</span>
+    <div class="profile">
+      <img src="https://i.imgur.com/2DhmtJ4.png" alt="Photo de profil">
+      <h2>MATONDO MAYA Tegra</h2>
+    </div>
 
-            <div class="profile">
-                <img src="https://i.imgur.com/2DhmtJ4.png" />
+    <div class="info">
+      <p><b>ID Administratif :</b> SN-2025-001</p>
+      <p><b>Poste :</b> Président Directeur Général</p>
+      <p><b>Entreprise :</b> SHOPNET</p>
+      <p><b>Statut :</b> Administrateur Actif</p>
+      <p><b>Date d'intégration :</b> Janvier 2025</p>
+    </div>
 
-                <h2>MATONDO MAYA Tegra</h2>
-            </div>
+    <div class="documents">
+      <h3>Documents administratifs</h3>
+      <a href="#">📄 Lettre de nomination</a>
+      <a href="#">📄 Identification administrative</a>
+      <a href="#">📄 Accord de confidentialité</a>
+    </div>
 
-            <div class="info">
-                <p><b>ID Administratif :</b> SN-2025-001</p>
-                <p><b>Poste :</b> Président Directeur Général</p>
-                <p><b>Entreprise :</b> SHOPNET</p>
-                <p><b>Statut :</b> Administrateur Actif</p>
-                <p><b>Date d'intégration :</b> Janvier 2025</p>
-            </div>
-
-            <div class="documents">
-                <h3>Documents administratifs</h3>
-
-                <a href="#">📄 Lettre de nomination</a>
-
-                <a href="#">📄 Identification administrative</a>
-
-                <a href="#">📄 Accord de confidentialité</a>
-            </div>
-
-            <div class="footer">
-                Plateforme officielle SHOPNET Vérification administrative
-            </div>
-        </div>
-    </body>
+    <div class="footer">
+      Plateforme officielle SHOPNET<br>Vérification administrative
+    </div>
+  </div>
+</body>
 </html>
